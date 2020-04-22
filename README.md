@@ -1,7 +1,9 @@
 # WakeUp
 
 Simple utility to wake computers on LAN.
-Exposes a function so, can be used as a lib.
+
+Exposes a function, so can be used as a lib.
+
 Has no external dependencies.
 
 ## Usage
