@@ -46,6 +46,7 @@ func WakeUp(ip, mac string) error {
 		return newErr(INVALID_MAC, nil)
 	}
 	ipAddr := net.ParseIP(ip)
+	ipAddr = ipAddr.To4()
 	// we always want to broadcast
 	ipAddr[3] = 0xff
 	conn, err := net.DialUDP("udp", nil, &net.UDPAddr{IP: ipAddr, Port: 7})
